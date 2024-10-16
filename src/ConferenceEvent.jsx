@@ -10,7 +10,6 @@ const ConferenceEvent = () => {
     const dispatch = useDispatch();
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
 
-    
     const handleToggleItems = () => {
         console.log("handleToggleItems called");
         setShowItems(!showItems);
@@ -159,7 +158,7 @@ const ConferenceEvent = () => {
                                 <div className="addons_selection">
 
                                 </div>
-                                <div className="total_cost">Total Cost:</div>
+                                <div className="total_cost">Total Cost: ${venueTotalCost}</div>
 
                             </div>
 
