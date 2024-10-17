@@ -120,12 +120,13 @@ const ConferenceEvent = () => {
             });
         }
         else if (section === "av") {
-            mealsItems.forEach((item) => {
+            avItems.forEach((item) => {
                 totalCost += item.cost * item.quantity;
             });
         } else if (section === "meals") {
-            avItems.forEach((item) => {
-                totalCost += item.cost * item.quantity;
+            mealsItems.forEach((item) => {
+                if (item.selected)
+                    totalCost += item.cost * numberOfPeople;
             });
         }
         return totalCost;
